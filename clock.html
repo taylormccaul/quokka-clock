@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Clock</title>
+        <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Montserrat|Cute+Font|Megrim|Monoton|Righteous|Stardos+Stencil|Frijole|UnifrakturMaguntia|Vast+Shadow&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 1em;
+            background-color:#d0ece7;
+        }
+
+        h1 {
+            font-family: 'Chelsea Market', Arial, sans-serif;
+            font-size: 3em;
+            text-align: center;
+            margin-top: 0.1em;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Righteous', Arial, sans-serif;
+            font-size: 3em;
+        }
+
+        /*h3 {
+            position: absolute;
+            font-family: 'Frijole', Helvetica, sans-serif;
+            font-size: 4em;
+            margin-top: -4em;
+            margin-left: 5.5em;
+            color: white;
+        }*/
+
+        img {
+            width: 35vw;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border: 10px solid #1c2833;
+            border-radius: 100px;
+        }
+
+        /*.arrows {
+            position: absolute;
+            color: white;
+            font-size: 40px;
+        }*/
+
+        h3 {
+            display: block;
+            margin-left: 24.5em;
+            font-family: 'Chelsea Market', Arial, cursive;
+            font-size: 1.5em;
+        }
+        
+        select {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Montserrat', Helvetica, sans-serif;
+            font-size: 1.2em;
+            width: 25em;
+        }
+
+        button {
+            background-color: #1c2833;
+            color: white;
+            font-family: 'Cute Font', Helvetica, cursive;
+            font-size: 1.4em;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20em;
+            height: 2em;
+            margin-top: 1.5em;
+            border: 3px solid #1c2833;
+            border-radius: 5px;
+        }
+    </style>
+    <body>
+        <h1>Quokka Clock: The World's Most Friendly Clock</h1>
+        <img src="quokka1.jpg" alt="Image of quokka smiling at the camera." id="img1">
+        <h2 id="clock-h2"></h2>
+        <h3>I'm feeling: </h3>
+        <select>
+            <option selected id="happy">Chipper</option>
+            <option id="sad">Down</option>
+            <option id="great">Positively Fabulous</option>
+            <option id="bitter">Vengeful</option>
+            <option id="weirdo">EEEVILLL</option>
+        </select>
+        <button>Submit!</button>
+        <!--<h3>QUOKKA-LAKA</h3>
+        <p class="arrows" id="left-arrow">&#8592;</p>
+        <p class="arrows" id="right-arrow">&#8594;</p>-->
+        <script>
+            function updateTime() {
+            var clockTime = new Date()
+            var hours = clockTime.getHours()
+            var minutes = clockTime.getMinutes()
+            var seconds = clockTime.getSeconds()
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            } 
+
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            } else if (hours > 12) {
+                h = hours - 12;
+            } else if (hours == 0) {
+                h = 12;
+            }
+
+            var timeString = h + ":" + minutes + ":" + seconds + " ";
+            if (hours > 11) {
+                timeString += "PM";
+            } else {
+                timeString += "AM";
+            }
+
+            document.getElementById("clock-h2").innerHTML = timeString;
+        }
+        setInterval(updateTime, 1000);
+
+        function photoGallery() {
+            var img1 = document.getElementById("img1");
+            //Load the other images here.
+
+            var happy = document.getElementById("happy");
+            var sad = document.getElementById("sad");
+            var great = document.getElementById("great");
+            var bitter = document.getElementById("bitter");
+            var weirdo = document.getElementById("weirdo");
+
+            function clickHandler() {
+                
+            }
+        }
+        </script>
+    </body>
+</html>
