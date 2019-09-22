@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<!--Start 9/18/19 | Finished 9/20/19-->
+<html>
+    <head>
+        <title>Clock</title>
+        <link href="https://fonts.googleapis.com/css?family=Chelsea+Market|Montserrat|Righteous&display=swap" rel="stylesheet">
+        <link href="quokkaclock.css" rel="stylesheet">
+        <script src="quokkaclock.js"></script>
+    </head>
+    <body>
+        <h1>Quokka Clock: The World's Most Friendly Clock</h1>
+        <img src="quokka1.jpg" alt="Image of quokka smiling at the camera." id="initial-img">
+        <h2 id="clock-h2"></h2>
+        <h3>And I'm feeling: </h3>
+        <select id="options">
+            <option selected id="happy" onclick="document.getElementById('initial-img').src='quokka1.jpg', 
+            root.style.setProperty('--bg-color', '#aed6f1')">Chipper</option>
+            <option id="sad" onclick="document.getElementById('initial-img').src='quokka2.jpg',
+             root.style.setProperty('--bg-color', '#5dade2')">Down</option>
+            <option id="great" onclick="document.getElementById('initial-img').src='quokka3.jpg',
+             root.style.setProperty('--bg-color', '#f8c471')">Positively Fabulous</option>
+            <option id="bitter" onclick="document.getElementById('initial-img').src='quokka4.jpg',
+             root.style.setProperty('--bg-color', '#1abc9c')">Vengeful</option>
+            <option id="weirdo" onclick="document.getElementById('initial-img').src='quokka5.jpg',
+             root.style.setProperty('--bg-color', '#f1948a')">EEEVILLL</option>
+             <option id="giddy" onclick="document.getElementById('initial-img').src='quokka6.jpg',
+             root.style.setProperty('--bg-color', '#ebdef0')">Giddy</option>
+             <option id="silly" onclick="document.getElementById('initial-img').src='quokka7.jpg',
+             root.style.setProperty('--bg-color', '#f7dc6f')">Silly</option>
+             <option id="awkward" onclick="document.getElementById('initial-img').src='quokka8.jpg',
+             root.style.setProperty('--bg-color', '#aeb6bf')">Awkward</option>
+        </select>
+        <h3 onclick="animateImage()">QUOKKA-LAKA</h3>
+    </body>
+</html>

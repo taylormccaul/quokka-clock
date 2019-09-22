@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 1em;
+    background-color:var(--bg-color, #d0ece7);
+}
+
+h1 {
+    font-family: 'Chelsea Market', Arial, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0.1em;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Righteous', Arial, sans-serif;
+    font-size: 3em;
+}
+
+img {
+    width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 10px solid #1c2833;
+    border-radius: 100px;
+}
+
+h3 {
+    display: block;
+    margin-left: 23.5em;
+    font-family: 'Chelsea Market', Arial, cursive;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+select {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 1.2em;
+    width: 25em;
+}
+
+.img-animation {
+    animation-name: photoAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    -webkit-animation-name: photoAnimation;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+}
+
+@keyframes photoAnimation {
+    from {
+        transform: rotate(0deg) scale(1) skew(0) translate(0px);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1) skew(0) translate(0px);
+        display: none;
+    }
+}
